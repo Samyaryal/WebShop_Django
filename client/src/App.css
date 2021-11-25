@@ -17,6 +17,7 @@
   grid-gap: 4em;
   justify-content: space-evenly; 
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 
 .product-content{
@@ -26,7 +27,9 @@
 }
 h2, h4, p{
   text-align: center;
-
+}
+span {
+  margin: 2%;
 }
 .detail-content{
   font-size: 20px;
@@ -57,9 +60,7 @@ margin-bottom: 1.9em;
 .card-button{
   grid-gap: 900px;
 }
-.footer {
-  position:absolute;
-  width:100%;
-  height:60px;  
-  background:#6cf;
+
+.card-button{
+  margin-left: 20%;
 }

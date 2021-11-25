@@ -119,7 +119,7 @@ function Products() {
                       className="btn btn-info"
                       onClick={() => addProuctTOCart(product)}
                     >
-                      To cart
+                      ToCart
                     </button>
                   </span>
                   <span>
