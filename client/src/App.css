@@ -40,11 +40,12 @@ span {
   margin: auto;
 
 }
-.home-link {display: flex;
-top: 20px;
-justify-content: space-around;
-margin: auto auto;
-margin-bottom: 1.9em;
+.home-link {
+  display: flex;
+  top: 20px;
+  justify-content: space-around;
+  margin: auto auto;
+  margin-bottom: 1.9em;
 }
 .image{
   height: 400px;
@@ -63,4 +64,12 @@ margin-bottom: 1.9em;
 
 .card-button{
   margin-left: 20%;
+}
+.cart-items{
+  width: 300px;
+  border: 3px solid black;
+  padding: 50px;
+  margin: 20px;
+  margin-left:  35%;
+
 }

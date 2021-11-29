@@ -5,13 +5,13 @@ import { removeFromCart } from '../redux/actions/cart';
 const Cart = () => {
   const dispatch = useDispatch();
   const { cartItems } = useSelector(state => state.cartReducer);
-  const delAction = country => dispatch(removeFromCart(country));
+  const delAction = product => dispatch(removeFromCart(product));
 
   return (
     <div>
       {cartItems.length > 0 ? (
         cartItems.map(cart => (
-          <div>
+          <div className ="cart-items">
             <img src={cart.image} height="110px" width="110px" />
             <p>{cart.name}</p>
             <button onClick={() => delAction(cart)}>Delete</button>

@@ -7,11 +7,15 @@ const initialState = {
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADDING_TO_CART:
-      const addTo = state.cartItems.push(action.payload);
-      return {
-        ...state,
-        cartitems: addTo
-      };
+    if (state.cartItems.includes(action.payload)){
+      return state;
+    }
+    return{...state, cartItems: [...state.cartItems, action.payload]}
+      // const addTo = state.cartItems.push(action.payload);
+      // return {
+      //   ...state,
+      //   cartitems: addTo
+      // };
 
     case REMOVE_FROM_CART:
       const delFrom = state.cartItems.filter(

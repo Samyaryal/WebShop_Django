@@ -28,7 +28,7 @@ function App() {
             </li>
 
             <li className="nav-item">
-              <Link to="/cart" className="nav-link">
+              <Link to={"/cart"} className="nav-link">
                 <i
                   className="fa fa-shopping-cart"
                   style={{ fontSize: '38px', color: 'red' }}
