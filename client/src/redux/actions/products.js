@@ -35,18 +35,18 @@ export const retriveProduct = id => async dispatch => {
 
 export const createProduct = (
   name,
+  image,
   price,
-  description,
   productCode,
-  image
+  description
 ) => async dispatch => {
   try {
     const res = await ProductService.create({
       name,
+      image,
       price,
-      description,
       productCode,
-      image
+      description
     });
     dispatch({
       type: CREATE_PRODUCT,

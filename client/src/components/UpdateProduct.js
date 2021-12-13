@@ -119,34 +119,6 @@ export const UpdatingProduct = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="description">Price</label>
-            <input
-              type="text"
-              className="form-control"
-              id="price"
-              required
-              value={currentProduct.price}
-              onChange={handleProductChange}
-              name="price"
-              default
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="description">Description</label>
-            <input
-              type="text"
-              className="form-control"
-              id="description"
-              required
-              value={currentProduct.description}
-              onChange={handleProductChange}
-              name="description"
-              default
-            />
-          </div>
-
-          <div className="form-group">
             <label htmlFor="Image">Image</label>
             <input
               type="text"
@@ -160,6 +132,20 @@ export const UpdatingProduct = () => {
           </div>
 
           <div className="form-group">
+            <label htmlFor="description">Price</label>
+            <input
+              type="text"
+              className="form-control"
+              id="price"
+              required
+              value={currentProduct.price}
+              onChange={handleProductChange}
+              name="price"
+              default
+            />
+          </div>
+          
+          <div className="form-group">
             <label htmlFor="productCode"> ProductCode </label>
             <input
               type="text"
@@ -169,6 +155,21 @@ export const UpdatingProduct = () => {
               value={currentProduct.productCode}
               onChange={handleProductChange}
               name="productCode"
+            />
+          </div>
+
+
+          <div className="form-group">
+            <label htmlFor="description">Description</label>
+            <input
+              type="text"
+              className="form-control"
+              id="description"
+              required
+              value={currentProduct.description}
+              onChange={handleProductChange}
+              name="description"
+              default
             />
           </div>
 

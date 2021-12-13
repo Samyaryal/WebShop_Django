@@ -6,10 +6,10 @@ const AddProduct = () => {
   const initialProductState = {
     id: null,
     name: '',
-    price: '',
-    description: '',
     image: ' ',
-    productCode: ''
+    price: '',
+    productCode: '',
+    description: '',
   };
   const [product, setProduct] = useState(initialProductState);
   const [submitted, setSubmitted] = useState(false);
@@ -22,16 +22,16 @@ const AddProduct = () => {
   };
 
   const saveProduct = () => {
-    const { name, description, price, image, productCode } = product;
+    const { name, image,  price,  productCode, description } = product;
 
-    dispatch(createProduct(name, price, description, image, productCode))
+    dispatch(createProduct(name, image,  price,  productCode, description ))
       .then(data => {
         setProduct({
           name: data.name,
-          price: data.price,
-          description: data.description,
           image: data.image,
-          productCode: data.productCode
+          price: data.price,
+          productCode: data.productCode,
+          description: data.description,
         });
         setSubmitted(true);
 
@@ -68,6 +68,19 @@ const AddProduct = () => {
               value={product.name}
               onChange={handleInputChange}
               name="name"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="image">Image</label>
+            <input
+              placeholder="text"
+              className="form-control"
+              id="image"
+              required
+              value={product.image}
+              onChange={handleInputChange}
+              name="image"
             />
           </div>
 
@@ -110,18 +123,7 @@ const AddProduct = () => {
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="image">Image</label>
-            <input
-              placeholder="text"
-              className="form-control"
-              id="image"
-              required
-              value={product.image}
-              onChange={handleInputChange}
-              name="image"
-            />
-          </div>
+        
 
           <button onClick={saveProduct} className="btn btn-success">
             Submit
