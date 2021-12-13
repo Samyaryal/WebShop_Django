@@ -5,6 +5,5 @@
 # This project was done as a part of assignment project
 
 # Technology used: 
-backend => Python django and its Rest framework
-frontend => React / Redux, React bootstrap
+backend => Python django and its Rest framework, database => mySql, frontend => React / Redux, React bootstrap
 
